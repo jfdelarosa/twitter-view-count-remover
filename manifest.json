@@ -3,7 +3,7 @@
   "description": "Removes the view count from tweets",
   "manifest_version": 3,
   "name": "Twitter View Count Remover",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "content_scripts": [
     {
       "matches": ["https://*.twitter.com/*"],

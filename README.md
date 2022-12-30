@@ -12,7 +12,7 @@ https://chrome.google.com/webstore/detail/twitter-view-count-remove/kacedphpmeln
 
 #### Install from source
 
-1. [Download the project](https://github.com/jfdelarosa/twitter-view-count-remover/archive/refs/heads/main.zip).
+1. Download the latest release](https://github.com/jfdelarosa/twitter-view-count-remover/releases/download/v1.2.0/buld-1.2.0-mv3.zip)
 2. Unzip the file.
 3. Go to the extensions page:
 
@@ -25,3 +25,18 @@ https://chrome.google.com/webstore/detail/twitter-view-count-remove/kacedphpmeln
 ### Install on Firefox
 
 Firefox is not supported at the moment.
+
+## Development
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Build
+
+```bash
+npm run build 2 # Manifest v2
+npm run build 3 # Manifest v3
+```

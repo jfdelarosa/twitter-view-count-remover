@@ -1,5 +1,5 @@
-chrome.storage.onChanged.addListener(async (changes, namespace) => {
-  for (let [key, { oldValue, newValue }] of Object.entries(changes)) {
+chrome.storage.onChanged.addListener(async (changes) => {
+  for (let [key, { newValue }] of Object.entries(changes)) {
     if (key !== "SHOW_COUNT") {
       return;
     }

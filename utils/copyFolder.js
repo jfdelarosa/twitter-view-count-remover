@@ -1,5 +1,5 @@
 const fs = require("fs");
-module.exports = function (src, dest) {
+const copyFolder = function (src, dest) {
   fs.readdir(src, (err, files) => {
     if (err) {
       throw err;
@@ -29,3 +29,5 @@ module.exports = function (src, dest) {
     });
   });
 };
+
+module.exports = copyFolder;

@@ -1,0 +1,25 @@
+{
+  "name": "twitter-view-count-remover",
+  "version": "1.1.1",
+  "description": "Ultra simple browser extension that removes view count from tweets.",
+  "scripts": {
+    "build": "node build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfdelarosa/twitter-view-count-remover.git"
+  },
+  "author": "jfdelarosa",
+  "license": "GNU General Public License v3.0",
+  "bugs": {
+    "url": "https://github.com/jfdelarosa/twitter-view-count-remover/issues"
+  },
+  "homepage": "https://github.com/jfdelarosa/twitter-view-count-remover#readme",
+  "dependencies": {
+    "zip-stream": "^4.1.0"
+  },
+  "devDependencies": {
+    "archiver": "^5.3.1"
+  }
+}

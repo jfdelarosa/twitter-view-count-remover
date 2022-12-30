@@ -16,12 +16,6 @@ const output = fs.createWriteStream(
 
 archive.pipe(output);
 
-archive.append("./dist/content.css", {
-  name: "content.css",
-});
-
-archive.append("./dist/manifest.json", {
-  name: "manifest.json",
-});
+archive.directory("./dist/", false);
 
 archive.finalize();

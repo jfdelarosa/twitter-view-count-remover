@@ -7,12 +7,14 @@ module.exports = function (manifest_version) {
       {
         matches: ["https://*.twitter.com/*"],
         css: ["content.css"],
+        js: ["content.js"],
         run_at: "document_end",
       },
     ],
     description: pkg.description,
     manifest_version,
     name: pkg.name,
+    permissions: ["storage", "tabs"],
     version: pkg.version,
   };
 
@@ -23,6 +25,10 @@ module.exports = function (manifest_version) {
   } else {
     manifest.action = {
       default_popup: "popup.html",
+    };
+
+    manifest.background = {
+      service_worker: "background.js",
     };
   }
 

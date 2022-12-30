@@ -7,3 +7,11 @@ const link = document.querySelector("a");
 link.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
   tweet
 )}`;
+
+chrome.storage.sync.get("SHOW_COUNT", (result) => {
+  document.querySelector("input").checked = !result.SHOW_COUNT;
+});
+
+document.querySelector("input").addEventListener("change", async (e) => {
+  await chrome.storage.sync.set({ SHOW_COUNT: !e.target.checked });
+});

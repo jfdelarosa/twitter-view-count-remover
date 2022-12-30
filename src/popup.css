@@ -1,0 +1,96 @@
+.container {
+  min-width: 200px;
+  padding: 1rem;
+}
+
+.options {
+  margin-bottom: 1rem;
+}
+
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+  user-select: none;
+}
+
+.toggle__switch {
+  display: inline-block;
+  background: #ccc;
+  border-radius: 16px;
+  width: 58px;
+  height: 32px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+}
+
+.toggle__switch:before,
+.toggle__switch:after {
+  content: "";
+}
+
+.toggle__switch:before {
+  display: block;
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: left 0.25s;
+}
+
+.toggle:hover .toggle__switch:before {
+  background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.toggle-checkbox:checked + .toggle__switch {
+  background: #56c080;
+}
+
+.toggle-checkbox:checked + .toggle__switch:before {
+  left: 30px;
+}
+
+.toggle__checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.toggle__label {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.btn {
+  align-items: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+  gap: 0.5rem;
+}
+
+.btn--blue {
+  background-color: #1da1f2;
+  color: #fff;
+  fill: #fff;
+}
+
+.btn__icon * {
+  display: inline;
+  height: 1rem;
+  width: 1rem;
+}
+
+.btn__text {
+  font-size: 1rem;
+  font-weight: 600;
+}

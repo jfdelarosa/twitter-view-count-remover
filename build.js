@@ -1,35 +1,26 @@
 const fs = require("fs");
 const archiver = require("archiver");
 const pkg = require("./package.json");
+const copyFolder = require("./utils/copyFolder");
+const buildManifest = require("./utils/buildManifest");
+
+const manifest_version = process.argv.slice(2) == "2" ? 2 : 3;
+
+copyFolder("./src/", "./dist/");
+fs.writeFile("./dist/manifest.json", buildManifest(manifest_version), () => {});
 
 const archive = new archiver("zip");
-const manifest_version = process.argv.slice(2) == "2" ? 2 : 3;
 const output = fs.createWriteStream(
-  `./dist/buld-${pkg.version}-mv${manifest_version}.zip`
+  `./build/buld-${pkg.version}-mv${manifest_version}.zip`
 );
-
-const manifest = {
-  author: pkg.author,
-  content_scripts: [
-    {
-      matches: ["https://*.twitter.com/*"],
-      css: ["content.css"],
-      run_at: "document_end",
-    },
-  ],
-  description: pkg.description,
-  manifest_version,
-  name: pkg.name,
-  version: pkg.version,
-};
 
 archive.pipe(output);
 
-archive.append("./src/content.css", {
+archive.append("./dist/content.css", {
   name: "content.css",
 });
 
-archive.append(JSON.stringify(manifest), {
+archive.append("./dist/manifest.json", {
   name: "manifest.json",
 });
 

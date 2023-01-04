@@ -11,7 +11,7 @@ fs.writeFile("./dist/manifest.json", buildManifest(manifest_version), () => {});
 
 const archive = new archiver("zip");
 const output = fs.createWriteStream(
-  `./build/buld-${pkg.version}-mv${manifest_version}.zip`
+  `./build/build-${pkg.version}-mv${manifest_version}.zip`
 );
 
 archive.pipe(output);

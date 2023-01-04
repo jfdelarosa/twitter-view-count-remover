@@ -12,7 +12,7 @@ https://chrome.google.com/webstore/detail/twitter-view-count-remove/kacedphpmeln
 
 #### Install from source
 
-1. Download the latest release](https://github.com/jfdelarosa/twitter-view-count-remover/releases/download/v1.3.0/buld-1.3.0-mv3.zip)
+1. Download the [latest release](https://github.com/jfdelarosa/twitter-view-count-remover/releases/download/v1.3.0/build-1.3.0-mv3.zip)
 2. Unzip the file.
 3. Go to the extensions page:
 
